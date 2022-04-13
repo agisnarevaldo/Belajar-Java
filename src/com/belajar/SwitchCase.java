@@ -6,11 +6,11 @@ public class SwitchCase {
     public static void main(String[] args) {
         // membuat variabel dan scanner
         String grade;
-        Scanner scan = new Scanner(System.in);
-
-        //mengambil inputan
-        System.out.println("Masukan Nilai : ");
-        grade = scan.nextLine();
+        try (Scanner scan = new Scanner(System.in)) {
+            //mengambil inputan
+            System.out.println("Masukan Nilai : ");
+            grade = scan.nextLine();
+        }
 
         //menghitung grade
         switch (grade) {
